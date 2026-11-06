@@ -285,3 +285,23 @@ export interface SimulationRun {
   model_version: string;
   created_at: string;
 }
+export interface SdnPort {
+  port: number;
+  rx_packets: number;
+  tx_packets: number;
+  rx_bytes: number;
+  tx_bytes: number;
+  rx_errors: number;
+  tx_errors: number;
+}
+
+export interface SdnSwitch {
+  switch_id: number;
+  connection: string;
+  ports: SdnPort[];
+}
+
+export interface SdnMonitorResponse {
+  status: string;
+  switches: SdnSwitch[];
+}

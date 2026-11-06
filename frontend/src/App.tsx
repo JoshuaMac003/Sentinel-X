@@ -1,3 +1,4 @@
+
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AppShell } from "./components/AppShell";
 import { OverviewPage } from "./pages/OverviewPage";
@@ -7,6 +8,7 @@ import { VulnerabilitiesPage } from "./pages/VulnerabilitiesPage";
 import { AttackPathsPage } from "./pages/AttackPathsPage";
 import { SimulationPage } from "./pages/SimulationPage";
 import { RiskPage } from "./pages/RiskPage";
+import { SdnPage } from "./pages/SdnPage";
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
         <Route path="/attack-paths" element={<AttackPathsPage />} />
         <Route path="/simulations" element={<SimulationPage />} />
         <Route path="/risk" element={<RiskPage />} />
+        <Route path="/sdn" element={<SdnPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AppShell>
